@@ -36,6 +36,27 @@ echo "example.com" | urlmate [-o output.txt] [-status-code CODES] [-detailed] [-
 
 cat linklist.txt | urlmate [-o output.txt] [-status-code CODES] [-detailed] [-timeout SECONDS]
 ```
+## **Parameters**
+```
+URLMate - URL Availability Checker
+
+Options:
+  -o            Output file path
+  -status-code  Filter results by HTTP status codes (comma-separated, e.g., 200,404)
+  -detailed     Show detailed output including status symbols and response time
+  -timeout      Set timeout in seconds (default: 10)
+
+Usage:
+  echo "example.com" | urlmate [-o output.txt] [-status-code CODES] [-detailed] [-timeout SECONDS]
+  cat linklist.txt | urlmate [-o output.txt] [-status-code CODES] [-detailed] [-timeout SECONDS]
+
+Examples:
+  cat urls.txt | urlmate                                    # Basic output
+  cat urls.txt | urlmate -detailed                         # Detailed output
+  cat urls.txt | urlmate -status-code 200,404             # Filter by status codes
+  cat urls.txt | urlmate -timeout 30                      # Set timeout to 30 seconds
+  echo "example.com" | urlmate -detailed -o results.txt -timeout 30   # Full example
+```
 
 ## Contributing
 
